@@ -45,6 +45,7 @@ def train_model(X_train, y_train, model, lr, n_epochs=50):
             if loss.item() < min_loss:
                 min_loss = loss.item()
                 best_model_state = model.state_dict().copy()  # Make a copy of the model state
+    
     print(f'minimum BCElogistic: {min_loss}')
 
     # Return the best model state and the minimum loss
