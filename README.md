@@ -1,4 +1,6 @@
-# NLP_Text_Stock_Prediction - Predicting Stock Price Movements Using Daily News
+# NLP_Text_Stock_Prediction
+
+## Predicting Stock Price Movements Using Daily News
 
 ## Introduction
 This was a group project in my NLP class exploring the effectiveness of LSTM networks and BERT embeddings in forecasting next-day stock price movements. We developed a baseline LSTM model using historical stock data and an advanced model combining LSTM and BERT embedding, which leverages daily news headlines. Our findings show a significant improvement in predictive power with the final model, evidenced by increases in the AUC scores. 
@@ -9,6 +11,8 @@ A key difference from the common sentiment analysis approach is that we are usin
 - **Establish Baseline Model**: Develop a baseline LSTM model using historical stock data.
 - **Develop Hybrid Model**: Combine LSTM with BERT embeddings for analyzing stock data and news headlines. The extracted complex embeddings from news headlines are used for nuanced stock price impact analysis.
 - **Quantitative Evaluation**: Measure improvements in predictive accuracy using AUC and compare the hybrid model against the baseline.
+
+![ ](/images/nlp_text_stock_prediction.png)
 
 ## Data Collection
 We utilized GNews API for gathering over 100,000 news article headlines related to business and technology, spanning 2020 to 2023. Stock data was sourced from Yahoo Finance API, focusing on S&P 500 companies.
@@ -31,7 +35,9 @@ To accommodate the high volume of daily news and BERT model's token limit, a cus
 |:--:| 
 | *Figure 1: This image shows how a single chunk of news headlines with a token size of 512 is transformed into embeddings by the BERT model and averaged.* |
 
-![Figure 2: Representation of Daily Context Embedding. This figure illustrates the aggregation of individual embeddings into a single vector that captures the essence of a day's news.](/images/daily_context_embedding.png)
+| ![ ](/images/daily_context_embedding.png) | 
+|:--:| 
+| *Figure 2: Representation of Daily Context Embedding. This figure illustrates the aggregation of individual embeddings into a single vector that captures the essence of a day's news.* |
 
 ## Results
 We employed metrics like accuracy, precision, F1 score, and AUC score to evaluate model performances. The LSTM with BERT Embeddings model outperformed the baseline in most metrics, indicating its effectiveness in stock price movement forecasting.
@@ -41,9 +47,16 @@ We employed metrics like accuracy, precision, F1 score, and AUC score to evaluat
 | Baseline LSTM | 0.43 |
 | LSTM + BERT Embeddings | 0.59 |
 
+| ![ ](/images/AUC_baseline.png) | 
+|:--:| 
+| *Figure 3: ROC for baseline model.* |
+
+| ![ ](/images/AUC_bert.png) | 
+|:--:| 
+| *Figure 4: ROC for ensembled model.* |
+
 ## Discussion
 From the results, LSTM with BERT Embeddings model outperformed the baseline model in AUC. This suggests its general effectiveness, but also highlights a need for improved balance in handling false positives and negatives, which are crucial in stock price movement forecasting.
-
 
 ## Conclusion
 In this project we explored the potential of utilizing NLP techniques, specifically the BERT model, for financial tasks. Combining news with past price data improved the model's ability to assess news impact on prices. Further improvements can be made by increasing the dataset (currently limited to 797 trading days) and including financial features like volatility and trading volumes. Also, a direct comparison between our model and a model using sentiment analysis should be conducted to observe the efficacy of using BERT embeddings directly.
