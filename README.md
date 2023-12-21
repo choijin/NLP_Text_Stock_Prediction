@@ -28,7 +28,7 @@ To accommodate the high volume of daily news and BERT model's token limit, a cus
 ## Results
 We employed metrics like accuracy, precision, F1 score, and AUC score to evaluate model performances. The LSTM with BERT Embeddings model outperformed the baseline in most metrics, indicating its effectiveness in stock price movement forecasting.
 
-| Method | AUC | 
+| Method | AUC |
 | --- |
 | Baseline LSTM | 0.43 |
 | LSTM + BERT Embeddings | 0.59 |
