@@ -1,6 +1,7 @@
 # NLP_Text_Stock_Prediction
 
 ## Predicting Stock Price Movements Using Daily News
+Click [HERE](https://github.com/choijin/NLP_Text_Stock_Prediction) to see the full and detailed script
 
 ## Introduction
 This was a group project in my NLP class exploring the effectiveness of LSTM networks and BERT embeddings in forecasting next-day stock price movements. We developed a baseline LSTM model using historical stock data and an advanced model combining LSTM and BERT embedding, which leverages daily news headlines. Our findings show a significant improvement in predictive power with the final model, evidenced by increases in the AUC scores. 
@@ -39,7 +40,7 @@ To accommodate the high volume of daily news and BERT model's token limit, a cus
 | *Figure 2: Representation of Daily Context Embedding. This figure illustrates the aggregation of individual embeddings into a single vector that captures the essence of a day's news.* |
 
 ## Results
-We employed metrics like accuracy, precision, F1 score, and AUC score to evaluate model performances. The LSTM with BERT Embeddings model outperformed the baseline in most metrics, indicating its effectiveness in stock price movement forecasting.
+We employed AUC score to evaluate model performances. 
 
 | Method | AUC |
 | --- | --- |
@@ -55,7 +56,7 @@ We employed metrics like accuracy, precision, F1 score, and AUC score to evaluat
 | *Figure 4: ROC for baseline + BERT model* |
 
 ## Discussion
-From the results, LSTM with BERT Embeddings model outperformed the baseline model in AUC. This suggests its general effectiveness, but also highlights a need for improved balance in handling false positives and negatives, which are crucial in stock price movement forecasting.
+The LSTM with BERT Embeddings model outperformed the baseline, indicating its effectiveness in stock price movement forecasting. This suggests its general effectiveness, but further analysis is required to test whether the improvement in the AUC is not due to chance.
 
 ## Conclusion
 In this project we explored the potential of utilizing NLP techniques, specifically the BERT model, for financial tasks. Combining news with past price data improved the model's ability to assess news impact on prices. Further improvements can be made by increasing the dataset (currently limited to 797 trading days) and including financial features like volatility and trading volumes. Also, a direct comparison between our model and a model using sentiment analysis should be conducted to observe the efficacy of using BERT embeddings directly.
