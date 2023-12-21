@@ -21,7 +21,7 @@ We utilized GNews API for gathering over 100,000 news article headlines related 
 - **Target Labeling**: The label for training data was derived from daily stock price movement of S&P 500.
 - **Daily News Aggregation**: We concatenated all headlines from a single day, along with stock price movement labels.
 - **Handling Exception Cases**: The dataset includes adjustments for holidays and market closures.
-- **Train, Val, Test Split**: The train, validation, and test data split was executed using a rolling-window method. During hyperparameter tuning, the optimal rolling-window (lookback period) was found, and this period was then used to construct the final training and test datasets.
+- **Train, Test Split**: The train, validation, and test data split was executed using a rolling-window method. During **hyperparameter tuning**, the optimal rolling-window (lookback period) was found, and this period was then used to construct the final training and test datasets.
 
 ## Methodology
 - **LSTM Baseline Model**: This model serves as a performance benchmark.
