@@ -27,7 +27,9 @@ We utilized GNews API for gathering over 100,000 news article headlines related 
 
 To accommodate the high volume of daily news and BERT model's token limit, a customized approach was adopted. News headlines were tokenized using BertTokenizer and then segmented into smaller chunks to stay within BERT's 512 token limit. Each chunk was processed through BERT to generate embeddings, represented as 3D tensors with dimensions reflecting token count and hidden layer nodes. These embeddings were **averaged** at the token level to create a single context vector per chunk. By iterating this process over all chunks and **averaging these embeddings**, a unified vector representing the overall context of a day's news was obtained.
 
-![Figure 1: Visualization of BERT Embedding Process. This image shows how a single chunk of news headlines with a token size of 512 is transformed into embeddings by the BERT model and averaged.](/images/bert_embedding.png)
+| ![ ](/images/bert_embedding.png) | 
+|:--:| 
+| *Figure 1: This image shows how a single chunk of news headlines with a token size of 512 is transformed into embeddings by the BERT model and averaged.* |
 
 ![Figure 2: Representation of Daily Context Embedding. This figure illustrates the aggregation of individual embeddings into a single vector that captures the essence of a day's news.](/images/daily_context_embedding.png)
 
