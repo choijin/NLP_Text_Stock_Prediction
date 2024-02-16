@@ -55,6 +55,8 @@ We employed AUC score to evaluate model performances.
 |:--:| 
 | *Figure 4: ROC for baseline + BERT model* |
 
+We acknowledge that the 0.43 AUC score is peculiar and that our baseline model needs improvements. However, we believe that there is still a value in using this baseline due to the improvement that the BERT Bembedding gives.
+
 ## Discussion
 The LSTM with BERT Embeddings model outperformed the baseline, indicating its effectiveness in stock price movement forecasting. This suggests its general effectiveness, but further analysis is required to test whether the improvement in the AUC is not due to chance.
 
